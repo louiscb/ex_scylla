@@ -10,7 +10,7 @@ use rustler::{
     Binary, Decoder, Encoder, Env, Error, NewBinary, NifResult, NifStruct, NifTaggedEnum, NifTuple,
     NifUntaggedEnum, ResourceArc, Term,
 };
-use rustler_bigint::BigInt as RustlerBigInt;
+// use rustler_bigint::BigInt as RustlerBigInt;
 use scylla::batch::BatchStatement;
 use scylla::frame::response::result::{ColumnSpec, ColumnType, CqlValue, Row};
 use scylla::frame::value::Counter;
@@ -193,9 +193,9 @@ pub struct ScyllaTableSpec {
 #[derive(NifStruct, Debug)]
 #[module = "ExScylla.Types.BigDecimal"]
 pub struct ScyllaBigDecimal {
-    pub int_val: RustlerBigInt,
-    // A positive scale means a negative power of 10
-    pub scale: i64,
+    // pub int_val: RustlerBigInt,
+    // // A positive scale means a negative power of 10
+    // pub scale: i64,
 }
 #[derive(NifStruct, Debug)]
 #[module = "ExScylla.Types.CqlDuration"]

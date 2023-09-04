@@ -3,7 +3,7 @@ defmodule ExScylla.Types.Errors.DbError do
   @type msg :: String.t()
   @typedoc """
     For more details, see:
-      https://docs.rs/scylla/#{@scylla_version}/scylla/transport/errors/enum.DbError.html
+      https://docs.rs/scylla/transport/errors/enum.DbError.html
   """
   @type t ::
           {:syntax_error, msg()}

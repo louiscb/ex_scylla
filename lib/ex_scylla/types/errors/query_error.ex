@@ -5,7 +5,7 @@ defmodule ExScylla.Types.Errors.QueryError do
   @type msg :: String.t()
   @typedoc """
     For more details, see:
-      https://docs.rs/scylla/#{@scylla_version}/scylla/transport/errors/enum.QueryError.html
+      https://docs.rs/scylla/transport/errors/enum.QueryError.html
   """
   @type t ::
           {:db_error, DbError.t()}
