@@ -1,15 +1,5 @@
 defmodule ExScylla.Macros.Native do
-  @scylla_version File.read!("#{File.cwd!()}/native/ex_scylla/Cargo.lock")
-                  |> String.split("[[package]]")
-                  |> Enum.find_value(nil, fn l ->
-                    case l |> String.trim() |> String.split("\n") do
-                      ["name = \"scylla\"", "version = " <> version | _] ->
-                        String.trim(version, "\"")
-
-                      _ ->
-                        false
-                    end
-                  end)
+  @scylla_version "0.9"
   @r ~r"> \s*(?<res>.*)\s*=\s*.*\.(?<func>.*)\(.*"
   @spec __using__(keyword) :: {:__block__, [], [{any, any, any}, ...]}
   defmacro __using__(opts) do

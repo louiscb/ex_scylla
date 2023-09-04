@@ -5,7 +5,7 @@ defmodule ExScylla.Types.Errors.BadQuery do
   @type msg :: String.t()
   @typedoc """
     For more details, see:
-      https://docs.rs/scylla/#{@scylla_version}/scylla/transport/errors/enum.BadQuery.html
+      https://docs.rs/scylla/transport/errors/enum.BadQuery.html
   """
   @type t ::
           {:serialize_values_error, SerializeValuesError.t()}

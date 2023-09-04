@@ -3,7 +3,7 @@ defmodule ExScylla.Types.Errors.BadKeyspaceName do
   @type msg :: String.t()
   @typedoc """
     For more details, see:
-      https://docs.rs/scylla/#{@scylla_version}/scylla/transport/errors/enum.BadKeyspaceName.html
+      https://docs.rs/scylla/0.9/scylla/transport/errors/enum.BadKeyspaceName.html
   """
   @type t ::
           {:empty, msg()}

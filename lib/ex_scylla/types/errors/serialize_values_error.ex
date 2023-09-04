@@ -3,7 +3,7 @@ defmodule ExScylla.Types.Errors.SerializeValuesError do
   @type msg :: String.t()
   @typedoc """
     For more details, see:
-      https://docs.rs/scylla/#{@scylla_version}/scylla/frame/value/enum.SerializeValuesError.html
+      https://docs.rs/scylla/frame/value/enum.SerializeValuesError.html
   """
   @type t ::
           {:too_many_values, msg()}
