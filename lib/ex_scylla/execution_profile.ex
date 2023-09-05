@@ -98,10 +98,10 @@ defmodule ExScylla.ExecutionProfile do
     func: :build,
     args: [ep],
     args_spec: [T.execution_profile_builder()],
-    return_spec: {:ok, T.execution_profile()},
+    return_spec: T.execution_profile(),
     doc_example: """
-    iex> {:ok, ep} = ExecutionProfile.builder()
-    ...>          |> ExecutionProfile.build()
+    iex> ep = ExecutionProfile.builder()
+    ...>        |> ExecutionProfile.build()
     iex> true = is_reference(ep)
     """
   )
@@ -110,7 +110,7 @@ defmodule ExScylla.ExecutionProfile do
     func: :into_handle,
     args: [ep],
     args_spec: [T.execution_profile()],
-    return_spec: {:ok, T.execution_profile_handle()},
+    return_spec: T.execution_profile_handle(),
     doc_example: """
     iex> eph = ExecutionProfile.builder()
     ...>          |> ExecutionProfile.build()
