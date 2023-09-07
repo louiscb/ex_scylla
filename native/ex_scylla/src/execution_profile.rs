@@ -108,7 +108,7 @@ fn ep_into_handle(
 #[module = "ExScylla.Types.LoadBalancingPolicy"]
 pub struct ScyllaLoadBalancingPolicy {
     datacenter: String,
-    rack: String,
+    // rack: String,
     is_token_aware: bool,
     permit_dc_failover: bool,
     enable_shuffling_replicas: bool,
@@ -119,7 +119,7 @@ impl ToRust<Arc<dyn LoadBalancingPolicy>> for ScyllaLoadBalancingPolicy {
     fn r(self) -> Arc<dyn LoadBalancingPolicy> {
         let mut lbpb = DefaultPolicy::builder();
         lbpb = lbpb.prefer_datacenter(self.datacenter);
-        lbpb = lbpb.prefer_rack(self.rack);
+        // lbpb = lbpb.prefer_rack(self.rack);
         lbpb = lbpb.token_aware(self.is_token_aware);
         lbpb = lbpb.permit_dc_failover(self.permit_dc_failover);
         lbpb = lbpb.enable_shuffling_replicas(self.enable_shuffling_replicas);
